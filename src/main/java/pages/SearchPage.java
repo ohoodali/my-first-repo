@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SearchPage extends BasePage{
-    private By producat = By.cssSelector("li>a[href=\"/products\"]");
 
     private By searchfiled = By.id("search_product");
     private By searchbutton = By.id("submit_search");
@@ -22,22 +21,16 @@ public class SearchPage extends BasePage{
     private By allProductTitles = By.cssSelector(".productinfo>p");
 
 
-
     public SearchPage(WebDriver driver) {
         super(driver);
     }
 
-    public LoginPage clickProducat ()
 
-    {
-        clickElement(producat);
-        return new LoginPage(driver);
-    }
-    public LoginPage searchProfuct (String searchproduct)
+    public SearchPage searchProfuctbyname (String searchproduct)
     {
         typeOnInputField(searchfiled, searchproduct);
         clickElement(searchbutton);
-        return new LoginPage(driver);
+        return new SearchPage(driver);
     }
     public void allProducatShown (String alproducat)
     {
@@ -46,7 +39,7 @@ public class SearchPage extends BasePage{
         Assert.assertEquals(alProduct,alproducat);
     }
 
-    public void searchProducat (String searchproduct)
+    public void AllSharedDisplayed(String searchproduct)
     {
 
         String allshared= getTextOfElement(allsearcheditem);
