@@ -1,0 +1,73 @@
+package pages;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class SearchPage extends BasePage{
+    private By producat = By.cssSelector("li>a[href=\"/products\"]");
+
+    private By searchfiled = By.id("search_product");
+    private By searchbutton = By.id("submit_search");
+    private By searsheditem = By.xpath("(//div[@class=\"overlay-content\"]/p)[1]");
+
+    private By allsearcheditem = By.xpath("//h2[@class=\"title text-center\"]");
+
+    private By allproduct = By.xpath("//h2[@class=\"title text-center\"]");
+
+    private By allProductTitles = By.cssSelector(".productinfo>p");
+
+
+
+    public SearchPage(WebDriver driver) {
+        super(driver);
+    }
+
+    public LoginPage clickProducat ()
+
+    {
+        clickElement(producat);
+        return new LoginPage(driver);
+    }
+    public LoginPage searchProfuct (String searchproduct)
+    {
+        typeOnInputField(searchfiled, searchproduct);
+        clickElement(searchbutton);
+        return new LoginPage(driver);
+    }
+    public void allProducatShown (String alproducat)
+    {
+
+        String alProduct= getTextOfElement(allproduct);
+        Assert.assertEquals(alProduct,alproducat);
+    }
+
+    public void searchProducat (String searchproduct)
+    {
+
+        String allshared= getTextOfElement(allsearcheditem);
+        Assert.assertEquals(allshared,searchproduct);
+    }
+
+    public void SearchItem (String s)
+    {
+
+      String Myshered= getTextOfElement(searsheditem);
+        Assert.assertEquals(s,Myshered);
+    }
+    public boolean isKeyWordInProducatTitles (String keyword) {
+        List<WebElement> productTitles = locateListOfElement(allProductTitles);
+
+        List<String> titles = new ArrayList<>();
+        for (int i = 0; i < productTitles.size(); i++) {
+            if (productTitles.get(i).getText().contains(keyword) == false) {
+                return false;
+            }
+            }
+            return true;
+        }
+    }
