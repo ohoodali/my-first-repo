@@ -14,7 +14,7 @@ public class HomePage extends BasePage{
     public void clickHome (String hme)
     {
         String home= getTextOfElement(myhome);
-        Assert.assertEquals(hme,home);
+        Assert.assertEquals(hme,home,"The Sigin Sign Out ");
 
     }
 }

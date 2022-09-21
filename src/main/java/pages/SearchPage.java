@@ -36,21 +36,21 @@ public class SearchPage extends BasePage{
     {
 
         String alProduct= getTextOfElement(allproduct);
-        Assert.assertEquals(alProduct,alproducat);
+        Assert.assertEquals(alProduct,alproducat,"The All Products should  Shown");
     }
 
     public void AllSharedDisplayed(String searchproduct)
     {
 
         String allshared= getTextOfElement(allsearcheditem);
-        Assert.assertEquals(allshared,searchproduct);
+        Assert.assertEquals(allshared,searchproduct,"The All SEARCHED PRODUCTS should  Shown");
     }
 
     public void SearchItem (String s)
     {
 
       String Myshered= getTextOfElement(searsheditem);
-        Assert.assertEquals(s,Myshered);
+        Assert.assertEquals(s,Myshered,"The  SEARCHED Item ");
     }
     public boolean isKeyWordInProducatTitles (String keyword) {
         List<WebElement> productTitles = locateListOfElement(allProductTitles);
