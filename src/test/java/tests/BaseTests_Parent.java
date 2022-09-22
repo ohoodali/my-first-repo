@@ -11,7 +11,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 import pages.NavigationBarPage;
-import pages.SearchPage;
 
 import java.io.File;
 import java.io.IOException;
