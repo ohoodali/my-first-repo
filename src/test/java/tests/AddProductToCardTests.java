@@ -10,13 +10,9 @@ public class AddProductToCardTests extends BaseTests_Parent{
     @Test
     public void cheekInOneTest ()
     {
-        HomePage base=new HomePage(driver);
         ProductsPage checkpricesquentotal = new ProductsPage(driver);
         CardPage cardpage= new CardPage(driver);
-        NavigationBarPage navigationBarPage = new NavigationBarPage(driver);
-        base.clickHome("Signup / Login");
-        navigationBarPage.clickProducat();
-        checkpricesquentotal.hoverOverPro();
+         checkpricesquentotal.hoverOverPro();
         checkpricesquentotal.clickLAddTocard();
         checkpricesquentotal.clickLShopping();
         checkpricesquentotal.hoverOverPro2();

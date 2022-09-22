@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.HomePage;
+import pages.NavigationBarPage;
+import pages.SearchPage;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,7 +28,11 @@ public class BaseTests_Parent {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-       driver.get(("https://www.automationexercise.com/"));
+          driver.get(("https://www.automationexercise.com/"));
+        NavigationBarPage navigationBarPage = new NavigationBarPage(driver);
+        HomePage base=new HomePage(driver);
+        base.clickHome("Signup / Login");
+        navigationBarPage.clickProducat();
     }
 
     @AfterMethod
