@@ -1,4 +1,4 @@
-package tests;
+package tests2;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
@@ -9,15 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.HomePage;
-import pages.NavigationBarPage;
+import pages2.RegisterUser;
 
 import java.io.File;
 import java.io.IOException;
 
 
-
-public class BaseTests_Parent {
+public class BaseTests_Parent2 {
 
    // public static String configPropertyFileName =  "configData.properties" ;
     WebDriver driver;
@@ -28,10 +26,8 @@ public class BaseTests_Parent {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
           driver.get(("https://www.automationexercise.com/"));
-        NavigationBarPage navigationBarPage = new NavigationBarPage(driver);
-        HomePage base=new HomePage(driver);
-        base.VerykHome("Signup / Login");
-        navigationBarPage.clickProducat();
+        RegisterUser regist=new RegisterUser(driver);
+        regist.clickSignup();
     }
 
     @AfterMethod

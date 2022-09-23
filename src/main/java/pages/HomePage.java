@@ -11,7 +11,7 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    public void clickHome (String hme)
+    public void VerykHome (String hme)
     {
         String home= getTextOfElement(myhome);
         Assert.assertEquals(hme,home,"The Sigin Sign Out ");
