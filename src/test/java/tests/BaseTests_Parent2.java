@@ -1,4 +1,4 @@
-package tests2;
+package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.commons.io.FileUtils;
@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages2.RegisterUser;
+import pages.RegisterUser;
 
 import java.io.File;
 import java.io.IOException;

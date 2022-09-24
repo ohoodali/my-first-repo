@@ -5,19 +5,18 @@ import org.openqa.selenium.WebDriver;
 
 public class LoginPage extends BasePage{
     // Locators
-    By emailField = By.id("email_create");
-   // By passwordField = By.id("Password");
-    By loginBtn = By.id("SubmitCreate");
+    By emailField = By.xpath("//input[@data-qa=\"login-email\"]");
+    By passwordField = By.xpath("//input[@data-qa=\"login-password\"]");
+    By loginBtn = By.xpath("//button[@data-qa=\"login-button\"]");
 
     public LoginPage(WebDriver driver) {
         super(driver);
     }
 
-    // Operations on locators
-    // successful login
     public HomePage loginToAppWithValidCredentials (String email)
     {
         typeOnInputField(emailField, email);
+
         clickElement(loginBtn);
         return new HomePage(driver);
     }

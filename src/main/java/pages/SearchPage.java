@@ -36,14 +36,14 @@ public class SearchPage extends BasePage{
     {
 
         String alProduct= getTextOfElement(allproduct);
-        Assert.assertEquals(alProduct,alproducat,"The All Products should  Shown");
+        Assert.assertEquals(alProduct,alproducat,"The All Products should Be Shown");
     }
 
     public void AllSharedDisplayed(String searchproduct)
     {
 
         String allshared= getTextOfElement(allsearcheditem);
-        Assert.assertEquals(allshared,searchproduct,"The All SEARCHED PRODUCTS should  Shown");
+        Assert.assertEquals(allshared,searchproduct,"The All SEARCHED PRODUCTS should Be Shown");
     }
 
     public void SearchItem (String s)
