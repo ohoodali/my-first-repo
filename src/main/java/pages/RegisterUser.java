@@ -193,7 +193,7 @@ public class RegisterUser extends BasePage {
 
     {
         String loggedinacc= getTextOfElement(loggedin);
-        Assert.assertEquals(loggedinacc,logged,"Ohood Ali Shoud Be Shown");
+        Assert.assertEquals(loggedinacc,logged,"Ohood Shoud Be Shown");
         return new RegisterUser(driver);
     }
     public RegisterUser ClickCountinButton ()

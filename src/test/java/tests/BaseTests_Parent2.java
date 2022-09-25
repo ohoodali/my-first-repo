@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import pages.HomePage;
 import pages.RegisterUser;
 
 import java.io.File;
@@ -26,6 +27,8 @@ public class BaseTests_Parent2 {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
           driver.get(("https://www.automationexercise.com/"));
+        HomePage base=new HomePage(driver);
+        base.VerykHome("Signup / Login");
         RegisterUser regist=new RegisterUser(driver);
         regist.clickSignup();
     }

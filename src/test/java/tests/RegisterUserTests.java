@@ -11,7 +11,7 @@ public void RegisteUser ()
 
     RegisterUser regist = new RegisterUser(driver);
     regist.NewUserSignupVisible("New User Signup!");
-    regist.enternameemail("ohood","www@gmail.com");
+    regist.enternameemail("ohood","ertr@gmail.com");
     regist.AccountInformation("ENTER ACCOUNT INFORMATION");
     regist.SelectTitle();
     regist.WritePssword("111111");
@@ -33,7 +33,7 @@ public void RegisteUser ()
     regist.CreateAccount();
     regist.AccountCreated("ACCOUNT CREATED!");
     regist.ClickCountinButton();
-  //  regist.CheckLoggedIn("Ohood");
+   // regist.CheckLoggedIn("Ohood");
     regist.ClickDeleteButton();
     regist.ClickDelete();
     regist.CheckDeelteAccount("Delete Account");
