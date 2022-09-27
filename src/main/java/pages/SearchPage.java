@@ -32,25 +32,27 @@ public class SearchPage extends BasePage{
         clickElement(searchbutton);
         return new SearchPage(driver);
     }
-    public void allProducatShown (String alproducat)
+    public String allProducatShown ()
     {
 
         String alProduct= getTextOfElement(allproduct);
-        Assert.assertEquals(alProduct,alproducat,"The All Products should Be Shown");
+      //  Assert.assertEquals(alProduct,alproducat,"The All Products should Be Shown");
+        return alProduct;
     }
 
-    public void AllSharedDisplayed(String searchproduct)
+    public String AllSharedDisplayed()
     {
 
         String allshared= getTextOfElement(allsearcheditem);
-        Assert.assertEquals(allshared,searchproduct,"The All SEARCHED PRODUCTS should Be Shown");
+        //Assert.assertEquals(allshared,searchproduct,"The All SEARCHED PRODUCTS should Be Shown");
+        return allshared;
     }
 
-    public void SearchItem (String s)
+    public String SearchItem ()
     {
 
       String Myshered= getTextOfElement(searsheditem);
-        Assert.assertEquals(s,Myshered,"The  SEARCHED Item ");
+        return Myshered;
     }
     public boolean isKeyWordInProducatTitles (String keyword) {
         List<WebElement> productTitles = locateListOfElement(allProductTitles);

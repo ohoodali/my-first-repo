@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.*;
 
@@ -10,11 +11,17 @@ public class SearchTests extends BaseTests_Parent{
     {
 
         SearchPage search = new SearchPage(driver);
-        search.allProducatShown("ALL PRODUCTS");
+        String Allprod=search.allProducatShown();
+        Assert.assertEquals(Allprod,"ALL PRODUCTS");
         search.searchProfuctbyname("Blue");
-        search.AllSharedDisplayed("SEARCHED PRODUCTS");
+        String Allsher=  search.AllSharedDisplayed();
+        Assert.assertEquals(Allsher,"SEARCHED PRODUCTS");
         search.isKeyWordInProducatTitles("Blue");
-        //  search.success( "Blue Top");
+       // String searchitem=  search.SearchItem();
+        //Assert.assertEquals(searchitem,"The  SEARCHED Item ");
+
+
+
 
     }
 
