@@ -11,9 +11,9 @@ public class SearchTests extends BaseTests_Parent{
     {
 
         SearchPage search = new SearchPage(driver);
-        Assert.assertEquals(search.allProducatShown(),"ALL PRODUCTS");
+        Assert.assertEquals(search.allProducatShown(),"ALL PRODUCTS","ALL PRODUCTS should be shown");
         search.searchProfuctbyname("Blue");
-        Assert.assertEquals( search.AllSharedDisplayed(),"SEARCHED PRODUCTS");
+        Assert.assertEquals( search.AllSharedDisplayed(),"SEARCHED PRODUCTS","SEARCHED PRODUCTS should be shown");
         search.isKeyWordInProducatTitles("Blue");
       //  Assert.assertEquals( search.SearchItem(),"The  SEARCHED Item ");
 
