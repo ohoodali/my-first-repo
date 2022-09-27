@@ -25,11 +25,11 @@ public class LoginPage extends BasePage{
         clickElement(loginBtn);
         return new LoginPage(driver);
     }
-    public void logintoyouraccountVisible (String newlogin)
+    public String logintoyouraccountVisible ()
     {
 
         String loginaccount= getTextOfElement(logintoaccount);
-        Assert.assertEquals(loginaccount,newlogin,"Login to your account Shown");
+        return loginaccount;
     }
     public LoginPage loginToAppWithInvalidCredentials (String invalidEmail,String pass)
     {
@@ -39,10 +39,12 @@ public class LoginPage extends BasePage{
         return new LoginPage(driver);
     }
 
-    public void incorrectEmailorpassword (String lincorrect)
+    public String incorrectEmailorpassword (String invalidEmail,String pass)
     {
-
+        typeOnInputField(emailField, invalidEmail);
+        typeOnInputField(passwordField, pass);
+        clickElement(loginBtn);
         String loginaccount= getTextOfElement(incorrect);
-        Assert.assertEquals(loginaccount,lincorrect,"Your email or password is incorrect! Shown");
+        return loginaccount;
     }
 }

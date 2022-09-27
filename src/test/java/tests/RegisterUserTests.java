@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.RegisterUser;
 
@@ -11,7 +12,7 @@ public void RegisteUser ()
 
     RegisterUser regist = new RegisterUser(driver);
     regist.NewUserSignupVisible("New User Signup!");
-    regist.enternameemail("ohood","ertr@gmail.com");
+    regist.enternameemail("ohood","swes@gmail.com");
     regist.AccountInformation("ENTER ACCOUNT INFORMATION");
     regist.SelectTitle();
     regist.WritePssword("111111");
@@ -31,12 +32,14 @@ public void RegisteUser ()
     regist.Writezeip("00000");
     regist.WriteMobile("012144200");
     regist.CreateAccount();
-    regist.AccountCreated("ACCOUNT CREATED!");
+    Assert.assertEquals(regist.AccountCreated(),"ACCOUNT CREATED!","ACCOUNT CREATED! Shoud Be Shown");
     regist.ClickCountinButton();
-   // regist.CheckLoggedIn("Ohood");
+ //   Assert.assertEquals(  regist.CheckLoggedIn(),"Ohood","Ohood Shoud Be Shown");
     regist.ClickDeleteButton();
     regist.ClickDelete();
-    regist.CheckDeelteAccount("Delete Account");
+    Assert.assertEquals( regist.CheckDeelteAccount(),"Delete Account","Delete Account Shoud Be Shown");
+
+
 
 
 

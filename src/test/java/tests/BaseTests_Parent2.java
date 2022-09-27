@@ -6,6 +6,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -28,7 +29,7 @@ public class BaseTests_Parent2 {
         driver.manage().window().maximize();
           driver.get(("https://www.automationexercise.com/"));
         HomePage base=new HomePage(driver);
-        base.VerykHome("Signup / Login");
+        Assert.assertEquals( base.VerykHome(),"Signup / Login","The Sigin Sign Out");
         RegisterUser regist=new RegisterUser(driver);
         regist.clickSignup();
     }

@@ -23,55 +23,54 @@ public class CardPage extends BasePage {
     {
         return locateListOfElement(allCartRows).size();
     }
-    public void getFirstProdu (String first)
+    public String getFirstProdu ()
     {
 
         String firstproducat= getTextOfElement(firstproduct);
-        Assert.assertEquals(first,firstproducat,"The First Product should be Men Tshirt T");
+        return firstproducat;
     }
 
-    public void getSeconProdu (String second)
+    public String getSeconProdu ()
     {
 
         String secondproducat= getTextOfElement(secondproduct);
-        Assert.assertEquals(second,secondproducat,"The Second Product should be Summer White Top");
+        return secondproducat;
     }
-    public void getFirstPrice (String fprice)
+    public String getFirstPrice ()
     {
 
         String firsprice= getTextOfElement(firstprice);
-        Assert.assertEquals(fprice,firsprice,"The First Price should be Rs. 400");
+        return firsprice;
     }
-    public void getsecondPrice (String sp)
+    public String getsecondPrice ()
     {
 
         String serpr= getTextOfElement(secondprice);
-        Assert.assertEquals(sp,serpr,"The Second Price should be Rs. 400");
+        return serpr;
     }
-    public void getFirsttot (String firsttotal)
+    public String getFirsttot ()
     {
 
         String firsttoal= getTextOfElement(firsttot);
-        Assert.assertEquals(firsttotal,firsttoal,"The  First Total  should be Rs. 400");
+        return firsttoal;
     }
-    public void getSecontot(String secondtotal)
+    public String getSecontot()
     {
 
         String secondto= getTextOfElement(secondtot);
-        Assert.assertEquals(secondtotal,secondtotal,"The Second Total should be Rs. 400");
+        return secondto;
     }
-    public void getFirQu (String firsqu)
+    public int getFirQu ()
     {
 
-        String firstquintiy= getTextOfElement(firstquen);
-        Assert.assertEquals(firsqu,firstquintiy,"The First Quinty should be 1");
+        int firstquintiy= Integer.parseInt(getTextOfElement(firstquen));
+        return firstquintiy;
     }
 
-    public void getsecondQU (String secondqu)
+    public int getsecondQU ()
     {
-
-        String secondquintiy= getTextOfElement(secondquen);
-        Assert.assertEquals(secondqu,secondquintiy,"The First Quint should be 1");
+        int secondquintiy= Integer.parseInt(getTextOfElement(secondquen));
+        return secondquintiy;
     }
 
 }

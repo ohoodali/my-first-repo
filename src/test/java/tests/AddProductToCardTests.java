@@ -19,14 +19,16 @@ public class AddProductToCardTests extends BaseTests_Parent{
         checkpricesquentotal.clickLAddTocard2();
         checkpricesquentotal.clickLView();
         Assert.assertEquals(cardpage.getSizeOfAddedProducts(), 2, "The added products should be 2");
-        cardpage.getFirstProdu("Men Tshirt");
-        cardpage.getSeconProdu("Summer White Top");
-        cardpage.getFirstPrice("Rs. 400");
-        cardpage.getFirQu("1");
-        cardpage.getFirsttot("Rs. 400");
-        cardpage.getsecondPrice("Rs. 400");
-        cardpage.getSecontot("Rs. 400");
-        cardpage.getsecondQU("1");
+        Assert.assertEquals( cardpage.getFirstProdu(),"Men Tshirt","The First Product should be Men Tshirt");
+        Assert.assertEquals( cardpage.getSeconProdu(),"Summer White Top","The Second Product should be Summer White Top");
+        Assert.assertEquals( cardpage.getFirstPrice(),"Rs. 400","The First Product Price should be Rs. 400");
+        Assert.assertEquals( cardpage.getFirQu(),1,"The First Product Quintty should be 1");
+        Assert.assertEquals( cardpage.getFirsttot(),"Rs. 400","The Frist Product Totol should be Rs. 400");
+        Assert.assertEquals( cardpage.getsecondPrice(),"Rs. 400","The Second Product Price should be Rs. 400");
+        Assert.assertEquals( cardpage.getsecondQU(),1,"The Second Product Qunity should be 1");
+        Assert.assertEquals( cardpage.getSecontot(),"Rs. 400","The Second Product Totol should be Rs. 400");
+
+
 
     }
 

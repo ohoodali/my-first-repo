@@ -181,20 +181,18 @@ public class RegisterUser extends BasePage {
         clickElement(createaccpuntbutt);
         return new RegisterUser(driver);
     }
-    public RegisterUser AccountCreated (String created)
+    public String AccountCreated ()
 
     {
         String accountcrea= getTextOfElement(accountCreated);
-        Assert.assertEquals(accountcrea,created,"ACCOUNT CREATED! Shoud Be Shown");
-        return new RegisterUser(driver);
+        return  accountcrea;
     }
 
-    public RegisterUser CheckLoggedIn (String logged)
+    public String CheckLoggedIn ()
 
     {
         String loggedinacc= getTextOfElement(loggedin);
-        Assert.assertEquals(loggedinacc,logged,"Ohood Shoud Be Shown");
-        return new RegisterUser(driver);
+        return loggedinacc;
     }
     public RegisterUser ClickCountinButton ()
 
@@ -215,11 +213,10 @@ public class RegisterUser extends BasePage {
         clickElement(deletebutton);
         return new RegisterUser(driver);
     }
-    public RegisterUser CheckDeelteAccount(String delete)
+    public String CheckDeelteAccount()
 
     {
         String deleted= getTextOfElement(deletedshown);
-        Assert.assertEquals(deleted,delete,"Delete Account Shoud Be Shown");
-        return new RegisterUser(driver);
+        return deleted;
     }
 }

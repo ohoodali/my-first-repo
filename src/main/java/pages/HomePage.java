@@ -11,10 +11,10 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    public void VerykHome (String hme)
+    public String VerykHome ()
     {
         String home= getTextOfElement(myhome);
-        Assert.assertEquals(hme,home,"The Sigin Sign Out ");
 
+        return home;
     }
 }

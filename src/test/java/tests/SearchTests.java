@@ -11,14 +11,11 @@ public class SearchTests extends BaseTests_Parent{
     {
 
         SearchPage search = new SearchPage(driver);
-        String Allprod=search.allProducatShown();
-        Assert.assertEquals(Allprod,"ALL PRODUCTS");
+        Assert.assertEquals(search.allProducatShown(),"ALL PRODUCTS");
         search.searchProfuctbyname("Blue");
-        String Allsher=  search.AllSharedDisplayed();
-        Assert.assertEquals(Allsher,"SEARCHED PRODUCTS");
+        Assert.assertEquals( search.AllSharedDisplayed(),"SEARCHED PRODUCTS");
         search.isKeyWordInProducatTitles("Blue");
-       // String searchitem=  search.SearchItem();
-        //Assert.assertEquals(searchitem,"The  SEARCHED Item ");
+      //  Assert.assertEquals( search.SearchItem(),"The  SEARCHED Item ");
 
 
 
