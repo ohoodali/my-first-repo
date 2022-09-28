@@ -11,7 +11,7 @@ public class SearchPage extends BasePage{
 
     private By searchfiled = By.id("search_product");
     private By searchbutton = By.id("submit_search");
-    private By searsheditem = By.xpath("//div[@class=\"overlay-content\"]/p");
+    private By searsheditem = By.xpath("//*[contains(text(), 'Blue Top')][1]");
 
     private By allsearcheditem = By.xpath("//h2[@class=\"title text-center\"]");
 

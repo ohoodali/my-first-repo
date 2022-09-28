@@ -46,9 +46,9 @@ public class LoginPage extends BasePage{
 
     public String incorrectEmailorpassword (String invalidEmail,String pass)
     {
-        typeOnInputField(emailField, invalidEmail);
+       /* typeOnInputField(emailField, invalidEmail);
         typeOnInputField(passwordField, pass);
-        clickElement(loginBtn);
+        clickElement(loginBtn);*/
         String loginaccount= getTextOfElement(incorrect);
         return loginaccount;
     }
