@@ -4,9 +4,9 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.LoginPage;
 
-public class LoginTests extends BaseTests_Parent2{
+public class LoginTests extends BaseTests_Parent{
     @Test
-    public void LoginPage () {
+    public void testLoginPage () {
 
         LoginPage loginpage=new LoginPage(driver);
         Assert.assertEquals(loginpage.logintoyouraccountVisible(),"Login to your account","Login to your account Shown");

@@ -4,15 +4,15 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.RegisterUser;
 
-public class RegisterUserTests extends BaseTests_Parent2 {
+public class RegisterUserTests extends BaseTests_Parent {
 
 @Test
-public void RegisteUser ()
+public void testRegisteNewUser ()
 {
 
     RegisterUser regist = new RegisterUser(driver);
     regist.NewUserSignupVisible("New User Signup!");
-    regist.enternameemail("ohood","swes@gmail.com");
+    regist.enternameemail("ohood","aa@gmail.com");
     regist.AccountInformation("ENTER ACCOUNT INFORMATION");
     regist.SelectTitle();
     regist.WritePssword("111111");

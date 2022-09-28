@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 public class CardPage extends BasePage {
     By allCartRows = By.className("cart_product");
@@ -12,10 +11,10 @@ public class CardPage extends BasePage {
 
     private By secondprice = By.xpath("(//td[@class=\"cart_price\"]/p)[2]");
 
-    private By firsttot = By.xpath("(//p[@class=\"cart_total_price\"])[1]");
-    private By secondtot = By.xpath("(//p[@class=\"cart_total_price\"])[2]");
-    private By firstquen = By.xpath("(//button[@class=\"disabled\"])[1]");
-    private By secondquen = By.xpath("(//button[@class=\"disabled\"])[2]");
+    private By firsttotal = By.xpath("(//p[@class=\"cart_total_price\"])[1]");
+    private By secondtotal = By.xpath("(//p[@class=\"cart_total_price\"])[2]");
+    private By firstquantity = By.xpath("(//button[@class=\"disabled\"])[1]");
+    private By secondquantity = By.xpath("(//button[@class=\"disabled\"])[2]");
     public CardPage(WebDriver driver) {
         super(driver);
     }
@@ -23,14 +22,14 @@ public class CardPage extends BasePage {
     {
         return locateListOfElement(allCartRows).size();
     }
-    public String getFirstProdu ()
+    public String getFirstProduct()
     {
 
         String firstproducat= getTextOfElement(firstproduct);
         return firstproducat;
     }
 
-    public String getSeconProdu ()
+    public String getSeconProduct()
     {
 
         String secondproducat= getTextOfElement(secondproduct);
@@ -48,28 +47,28 @@ public class CardPage extends BasePage {
         String serpr= getTextOfElement(secondprice);
         return serpr;
     }
-    public String getFirsttot ()
+    public String getFirsttotal()
     {
 
-        String firsttoal= getTextOfElement(firsttot);
+        String firsttoal= getTextOfElement(firsttotal);
         return firsttoal;
     }
-    public String getSecontot()
+    public String getSecontotal()
     {
 
-        String secondto= getTextOfElement(secondtot);
+        String secondto= getTextOfElement(secondtotal);
         return secondto;
     }
-    public int getFirQu ()
+    public int getFirstquantity()
     {
 
-        int firstquintiy= Integer.parseInt(getTextOfElement(firstquen));
+        int firstquintiy= Integer.parseInt(getTextOfElement(firstquantity));
         return firstquintiy;
     }
 
-    public int getsecondQU ()
+    public int getSecondQuantity()
     {
-        int secondquintiy= Integer.parseInt(getTextOfElement(secondquen));
+        int secondquintiy= Integer.parseInt(getTextOfElement(secondquantity));
         return secondquintiy;
     }
 
