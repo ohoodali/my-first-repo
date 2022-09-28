@@ -17,13 +17,13 @@ public class ProductsPage extends BasePage{
     public ProductsPage(WebDriver driver) {
         super(driver);
     }
-    public ProductsPage hoverOverPro ()
+    public ProductsPage hoverOverFirstProduct()
 
     {
         hoverElement(firstproduct);
         return new ProductsPage(driver);
     }
-    public ProductsPage hoverOverPro2 ()
+    public ProductsPage hoverOverSecondProduct()
 
     {
 
@@ -32,12 +32,12 @@ public class ProductsPage extends BasePage{
     }
 
 
-    public ProductsPage clickLAddTocard()
+    public ProductsPage clickLAddTocardFirstProduct()
     {
         clickElement(allprodcate);
         return new ProductsPage(driver);
     }
-    public ProductsPage clickLAddTocard2()
+    public ProductsPage clickLAddTocardSecondProduct()
     {
         clickElement(allprodcate2);
         return new ProductsPage(driver);
@@ -49,9 +49,9 @@ public class ProductsPage extends BasePage{
         clickElement(shopping);
         return new ProductsPage(driver);
     }
-    public LoginPage clickLView()
+    public CardPage  clickLView()
     {
         clickElement(viewcart);
-        return new LoginPage(driver);
+        return new CardPage(driver);
     }
 }

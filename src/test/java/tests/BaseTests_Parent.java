@@ -19,8 +19,6 @@ import java.io.IOException;
 
 
 public class BaseTests_Parent {
-
-   // public static String configPropertyFileName =  "configData.properties" ;
     WebDriver driver;
 
     @BeforeMethod
@@ -29,10 +27,7 @@ public class BaseTests_Parent {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
           driver.get(("https://www.automationexercise.com/"));
-        NavigationBarPage navigationBarPage = new NavigationBarPage(driver);
-        HomePage base=new HomePage(driver);
-        Assert.assertEquals( base.VerykHome(),"Signup / Login","The Sigin Sign Out");
-              navigationBarPage.clickProducat();
+
     }
 
     @AfterMethod

@@ -2,7 +2,6 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 
 public class HomePage extends BasePage{
     private By myhome = By.xpath("//a[@href='/login']");
@@ -11,7 +10,7 @@ public class HomePage extends BasePage{
         super(driver);
     }
 
-    public String VerykHome ()
+    public String VeryHome()
     {
         String home= getTextOfElement(myhome);
 

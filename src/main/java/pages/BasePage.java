@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 import java.time.Duration;
 import java.util.List;
@@ -39,10 +38,10 @@ public class BasePage {
     }
     public void hoverElement (By elementLocator)
     {
-        Actions actions2 = new Actions(this.driver);
-        WebElement product2 = this.driver.findElement(elementLocator);
-        actions2.moveToElement(product2).perform();
-        actions2.perform();
+        Actions actions = new Actions(this.driver);
+        WebElement element = locateElement(elementLocator);
+        actions.moveToElement(element).perform();
+        actions.perform();
 
     }
 
