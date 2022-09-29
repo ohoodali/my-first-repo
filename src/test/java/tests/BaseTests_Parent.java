@@ -21,6 +21,8 @@ import java.io.IOException;
 public class BaseTests_Parent {
     WebDriver driver;
 
+
+
     @BeforeMethod
     public void setup_initiateDriver() {
         WebDriverManager.chromedriver().setup();
