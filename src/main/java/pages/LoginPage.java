@@ -8,11 +8,17 @@ public class LoginPage extends BasePage{
     // Locators
     By emailField = By.xpath("//input[@data-qa=\"login-email\"]");
     By passwordField = By.xpath("//input[@data-qa=\"login-password\"]");
+    By login= By.xpath("//a[@href=\"/login\"]");
     By loginBtn = By.xpath("//button[@data-qa=\"login-button\"]");
     By logintoaccount = By.xpath("//div[@class=\"login-form\"]/h2");
     By incorrect = By.xpath("//p[ contains (text(), \"Your email or password \" )]");
 
+    public LoginPage clickLogin()
+    {
+        clickElement(login);
 
+        return new LoginPage(driver);
+    }
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -27,7 +33,6 @@ public class LoginPage extends BasePage{
     }
     public String logintoyouraccountVisible ()
     {
-
         String loginaccount= getTextOfElement(logintoaccount);
         return loginaccount;
     }
@@ -41,9 +46,9 @@ public class LoginPage extends BasePage{
 
     public String incorrectEmailorpassword (String invalidEmail,String pass)
     {
-        typeOnInputField(emailField, invalidEmail);
+       /* typeOnInputField(emailField, invalidEmail);
         typeOnInputField(passwordField, pass);
-        clickElement(loginBtn);
+        clickElement(loginBtn);*/
         String loginaccount= getTextOfElement(incorrect);
         return loginaccount;
     }
